@@ -1,8 +1,24 @@
-#!/bin/bash
+#!/bin/bash -xv
 
+ng () {
+    # 第一引数を標準出力
+    echo NG at Line $1
+    res=1
+}
+
+res=0
+
+### I/O TEST ###
 out=$(seq 5 | ./plus)
+# ${LINENO} はその時の行番号が入る
+# || の左側で異常コードが来たら右側を実行
+[ "${out}" = 14.0 ] || ng ${LINENO}
 
-[ "${out}" = 14.0 ]
+# && の左側が成功したら右側を実行
+[ "$res" = 0 ] && echo OK
 
-echo $?
+# ng が一度でも実行されると res が 1 になるので
+# $res が 0 なら OK という処理ができあがる
+
+echo $res
 
