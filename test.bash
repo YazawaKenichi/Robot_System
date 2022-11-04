@@ -7,5 +7,9 @@ pwd
 # /home/runner/work/REPOSITORY/REPOSITORY
 # が出力される。
 
-./scripts/plus_stdin.py < ./scripts/nums
+SCRIPTDIR=./scripts
+
+seq 10 > $SCRIPTDIR/nums
+
+$SCRIPTDIR/plus_stdin.py < $SCRIPTDIR/nums
 
