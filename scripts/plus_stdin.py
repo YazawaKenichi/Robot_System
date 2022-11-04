@@ -1,6 +1,6 @@
-#!/usr/bin/env python
-
+#!/usr/bin/python3
 import sys
+
 
 def tonum(s):
     try:
@@ -8,9 +8,9 @@ def tonum(s):
     except:
         return float(s)
 
-ans = 0.0
+
+ans = 0
 for line in sys.stdin:
-    line = line.rstrip()
     ans += tonum(line)
 
 print(ans)
