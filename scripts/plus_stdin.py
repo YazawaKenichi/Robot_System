@@ -12,7 +12,8 @@ def tonum(s):
 
 ans = 0.0
 for line in sys.stdin:
-    ans += float(line)
+    line = line.rstrip()
+    ans += tonum(line)
 
 print(ans)
 
