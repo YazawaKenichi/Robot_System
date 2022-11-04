@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# SPDX-FileCopyrightText: 2022 Shuji Kawahara s21c1036hn@gmail.com
-# SPDX-License-Identifier: BSD-3-CLause
 
 import sys
 
