@@ -7,7 +7,7 @@ pwd
 # /home/runner/work/REPOSITORY/REPOSITORY
 # が出力される。
 
-SCRIPTDIR=./scripts
+SCRIPTDIR=.
 
 seq 10 > $SCRIPTDIR/nums
 

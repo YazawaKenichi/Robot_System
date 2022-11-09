@@ -9,5 +9,5 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: All test
-              run: bash -xv ./scripts/plus_stdin.py < ./scripts/nums
+              run: bash -xv ./plus_stdin.py < ./nums
 
