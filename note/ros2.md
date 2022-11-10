@@ -33,5 +33,123 @@ package.xml はパッケージがどのようなものか説明するための�
 
 package.xml がパッケージのルートディレクトリとして扱われるらしい。
 
+### ROS2 のセットアップ
+```
+git clone https://github.com/ryuichiueda/ros2_setup_scripts
+cd ros2_setup_scripts
+./setup.bash
+source ~/.bashrc
+```
+
+### 動作確認
+```
+ros2 run demo_nodes_py talker
+ros2 run demo_nodes_py listener
+```
+listener が hear していたら問題なく動作している。
+
+talker だけ起動したとき、talker ノードが message の publish を垂れ流していることがわかる。
+
+listener だけ起動したとき、publisher が存在しないことから何も受け取れていないことがわかる。
+
+```
+ros2 run rqt_graph rqt_graph
+```
+を実行することで、ROS 通信の構造が確認できる。
+
+### パッケージの作成
+```
+~/ros2_ws/src$ ros2 pkg create mypkg --build-type ament_python
+```
+
+### ライセンスやメンテナーの設定
+package.xml だけでなく、setup.py も変更する。
+
+### ~/.bashrc の追記
+```
+source ~/ros2_ws/install/setup.bash
+source ~/ros2_ws/install/local_setup.bash
+```
+```
+source ~/.bashrc
+```
+
+### パッケージのリストを表示
+```
+ros2 pkg list | grep mypkg
+```
+
+### スクリプトの作成
+#### パブリッシャを持つノード
+```
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Int16
+```
+##### `package.xml` に利用するモジュールを追加する
+```
+<exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+```
+##### `setup.py` にエントリポイントを登録
+```
+entry_points={
+'console_scripts': [
+    'talker = mypkg.talker:main',
+    #'listener = mypkg.llistener:main'
+],
+```
+##### 利用するパッケージを確認してインストール
+Ubuntu 22.04 : humble
+Ubuntu 20.04 : foxy
+```
+sudo rosdep install -i --from-path src --rosdistro humble -y
+```
+##### ビルド
+```
+colcon build
+source ~/.bashrc
+```
+
+##### 実行
+```
+ros2 run mypkg talker
+```
+何も表示されないのが正しい。
+##### 他の端末でサブスクライブ
+```
+ros2 topic echo /countup
+```
+
+#### サブスクライバを持つノードの記述
+`listener.py`
+
+```
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Int16
+
+def cb(msg):
+    global node
+    node.get_logger().info("Listen: %d" % msg.data)
+
+rclpy.init()
+node = Node("listener")
+pub = node.create_subscription(Int16, "countup", cb, 10)
+rclpy.spin(node)
+```
+##### talker と listener の実行
+listener.py について、setup.py へ記述する。
+
+colcon build する。
+
+```
+ros2 run mypkg talker
+ros2 run mypkg listener
+```
+
+
+
+
 
 
