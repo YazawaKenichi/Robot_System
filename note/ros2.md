@@ -23,4 +23,15 @@ topic を chatter 、 node を talker とすると、tolker ノードは publish
 
 publisher はデータをとにかく垂れ流す。subscriber は必要なときにデータを見に行く。
 
+package.xml はパッケージがどのようなものか説明するためのファイル
+
+パッケージの説明をするとか、ライセンスの記述とか、第三者に説明するだけなら README.md で良くない？
+
+[package.xml の必要性](https://qiita.com/np_hsgw/items/de6316d69ab984c44a82) 
+
+上記サイトによると ROS のシステム内でも package.xml を参照しているため、xml ファイルでちゃんとしっかり記述するべき。
+
+package.xml がパッケージのルートディレクトリとして扱われるらしい。
+
+
 
