@@ -20,3 +20,7 @@ REPOSITORY_ROOT
 FILENAME.yaml の中で例えば hogehoge.bash を指定したら
 それは FILE0-1 にあるべき。
 
+Python コードをテストしたいときは run を bash ではなく python にするべき。
+bash でやるとしたら、シバンはどう書けばいい？？？？
+GitHub Actions の Python はどこにある？
+

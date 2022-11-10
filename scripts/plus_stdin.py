@@ -9,7 +9,7 @@ def tonum(s):
 
 ans = 0
 for line in sys.stdin:
-    ans += tonum(float(line))
+    ans += tonum(line)
 
 print(ans)
 
