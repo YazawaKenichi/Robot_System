@@ -1,16 +1,123 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import sys
+import time # sleep
+import array # array.array('s', ...)
+import math # sin cos tan
+from enum import Enum # Enum
 
-def tonum(s):
-    try:
-        return int(s)
-    except:
-        return float(s)
+#define debug
 
-ans = 0
-for line in sys.stdin:
-    ans += tonum(line)
+### define
+CLS     = "\033[2J" # 画面を消去する
+SCROLL  ="\033[1S"  # 一行分スクロールする
+DELETE  ="\033[0K"  # 行中右側を消去
+HIDDEN  ="\033[0m"  # 次からの文字列を隠す
+EX      ="\033[39m" # 次から文字の装飾をなくす
+RED     ="\033[31m" # 文字色を赤くする
+YELLOW  ="\033[33m" # 文字色を黄色にする
+GREEN   ="\033[32m" # 文字色を緑にする
+CYAN    ="\033[36m" # 文字色をシアンにする
 
-print(ans)
+### enum
+Help = Enum('ARITHMETIC', 'FUNCTIONAL')
+
+# methods
+def printlogo():
+    printl1 = "  _____          _____  _____ ____  \n"
+    printl2 = " / ____|   /\\   / ____||_   _/ __ \\ \n"
+    printl3 = "| |  __   /  \\  | (___   | || |  | |\n"
+    printl4 = "| | |_ | / /\\ \\  \\___ \\  | || |  | |\n"
+    printl5 = "| |__| |/ ____ \\ ____) |_| || |__| |\n"
+    printl6 = " \\_____/_/    \\_\\_____/|_____\\____/ \n"
+    print(CLS)
+    print(print1)
+    print(print2)
+    print(print3)
+    print(print4)
+    print(print5)
+    print(print6)
+    time.sleep(3)
+    print(CLS)
+
+def printred(str string):
+    print(RED)
+    print("*** ERROR ***")
+    print(string)
+    print(EX)
+
+def printyellow(str string):
+    print(YEL)
+    print("*** WARNING ***")
+    print(string)
+    print(EX)
+
+def printcyan(str string):
+    print(CYAN)
+###    print("*** COLLECT ***")
+    print(string)
+    print(EX)
+
+def printhgreen(str string):
+    print(GREEN)
+###    print("*** DEBUG ***")
+    print(string)
+    print(EX)
+
+def printi():
+    print("\r>>> " + DELETE)
+
+def printhelp(Help place):
+    if(place == Help.ARITHMETIC):
+        print("四則演算のヘルプ")
+    elif(place == Help.FUNCTIONAL):
+        print("関数演算のヘルプ")
+    else
+        printred("Program Error !")
+
+def printk(int i):
+    print("三元連立方程式を解きます")
+    print("ax + by + cz = k で表される数式において、")
+    strings = [
+            "１つめの等式\n左辺\nx の係数 = ",
+            "y の係数 = ",
+            "z の係数 = ",
+            "右辺\n定数項 = ",
+            "2つめの等式\n左辺\nx の係数 = ",
+            "y の係数 = ",
+            "z の係数 = ",
+            "右辺\n定数項 = ",
+            "3つめの等式\n左辺\nx の係数 = ",
+            "y の係数 = ",
+            "z の係数 = ",
+            "右辺\n定数項 = "
+            ]
+    print(strings[i])
+
+def numarray(charctor):
+    while(charctor != "\0"):
+        if(charactor == '+' 
+                || charactor == '-'
+                || charactor == '*'
+                || charactor == '/'
+                || charactor == '.'):
+        else:
+            if(charactor != str.isdigit(charactor)):
+                return False
+        return True
+
+def tri(function, inputnum):
+    if(function == 's' || function == 'S'):
+        return math.sin(inputnum * math.pi / 180)
+    if(function == 'c' || function == 'C'):
+        return math.cos(inputnum * math.pi / 180)
+    if(function == 't' || function == 'T'):
+        return math.tan(inputnum * math.pi / 180)
+    printyellow("そのような関数またはコマンドはありません。ヘルプは '?' で表示できます。")
+
+def arithmetic(result):
+    code = '\0'
+
+### 
+main()
 
