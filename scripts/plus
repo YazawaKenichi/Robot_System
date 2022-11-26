@@ -13,4 +13,5 @@ for line in sys.stdin:
     ans += tonum(line)
 
 print(ans)
+sys.exit(0)
 
