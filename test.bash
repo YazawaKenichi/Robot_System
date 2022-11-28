@@ -18,19 +18,24 @@ out=$(seq 5 | ./plus)
 [ "${out}" = 15.0 ] || ng ${LINENO}
 
 ### STRANGE INPUT ###
-out=$(echo あ | ./plus)
+out=$(echo あ | ./plus > /dev/null)
+# 直前のコマンドの終了コード $?
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo | ./plus)
+out=$(echo | ./plus > /dev/null)
+# １つ目の引数
+echo $1
 [ "$1" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
 # && の左側が成功したら右側を実行
-[ "$res" = 0 ] && echo OK
+[ "$res" = 0 ] && echo ALL OK
 
 # ng が一度でも実行されると res が 1 になるので
 # $res が 0 なら OK という処理ができあがる
 
 echo $res
+
+exit(0)
 
