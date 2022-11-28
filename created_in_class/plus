@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # coding: utf-8
+# SPDX-FileCopyrightText: 2022 KAWAHARA Shuji s21c1036hn@s.chibakoudai.jp
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 
 def tonum(s):
     try:
         return int(s)
-    except ValueError:
+    except:
         return float(s)
 
 ans = 0

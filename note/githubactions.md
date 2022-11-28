@@ -24,3 +24,10 @@ Python コードをテストしたいときは run を bash ではなく python 
 bash でやるとしたら、シバンはどう書けばいい？？？？
 GitHub Actions の Python はどこにある？
 
+GitHub Actions は Docker を用いてコンテナ内で、任意のコマンドを実行できるもの。
+
+|メリット
+|---
+|ローカルで、テストしたい環境の Docker コンテナを立ち上げてテストする必要がなくなる
+| -> 楽！
+
