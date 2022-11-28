@@ -27,27 +27,27 @@ git clone https://github.com/yazawakenichi/robot_sytem
 ## 使用方法
 1. 今すぐ soiya を摂取したい！
   ```
-  soiya
+  ./soiya
   ```
 
 2. 耳で聞く soiya の爽快感を味わいたい！
   ```
-  soiya -a
+  ./soiya -a
   ```
 
 3. NOM に会いたい！
   ```
-  soiya -n
+  ./soiya -n
   ```
 
 4. 気分転換したい！
   ```
-  soiya -k
+  ./soiya -k
   ```
 
 5. かわいい soiya が見たい！
   ```
-  soiya -e
+  ./soiya -e
   ```
 
 ## 参考
