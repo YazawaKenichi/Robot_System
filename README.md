@@ -1,4 +1,54 @@
 # Robot_System
+## plus
+[![test](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml/badge.svg)](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml)
+
+### 概要
+ファイルから数列を取得してその総和を出すスクリプトです。
+
+### 動作環境
+- OS : Ubuntu 20.04
+- Python : 3.7 ~ 3.10
+
+### 起動方法
+
+## soiya.sh
+1. 以下のコマンドを実行してこのリポジトリをクローンします。
+```
+git clone https://github.com/yazawakenichi/robot_system
+```
+
+1. 以下のコマンドを実行してスクリプトを実行します
+```
+python3 plus < nums
+```
+
+### 使用方法
+1. nums ファイルに総和を求めたい数列を入力します
+1. 以下を実行すると総和が出力されます
+```
+python3 plus < nums
+```
+
+#### 例
+```
+$ cat nums
+1.1
+2.2
+3.3
+4.4
+5.5
+6.6
+7.7
+8.8
+9.9
+10.0
+-11.11
+-12.12
+-13.13
+$ python3 plus < nums
+23.14
+```
+
 ## soiya.sh
 ### 概要
 僕の好きな言葉、「ソイヤ」（ `soiya` ）を打つと、僕の好きな人ノムさん（ `NOM` ）が、「 SOIYA!!! 」 という音声と共に、アスキーアートで挨拶しにきてくれます。
@@ -11,13 +61,13 @@
 - OS : Ubuntu 20.04
 
 ### 起動方法
-0. このリポジトリは `mplayer` を使用しているためインストールします
+0. この soiya.sh は `mplayer` を使用しているためインストールします
 ```
 sudo apt install mplayer
 ```
 1. 以下のコマンドを実行してこのリポジトリをクローンします。
 ```
-git clone https://github.com/yazawakenichi/robot_sytem
+git clone https://github.com/yazawakenichi/robot_system
 ```
 1. 以下のコマンドで、soiya プログラムを実行します。
 ```
