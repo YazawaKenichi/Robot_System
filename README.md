@@ -51,14 +51,16 @@ git clone https://github.com/yazawakenichi/robot_sytem
   ```
 
 ## 参考
-- [シェルスクリプト wait コマンド](https://qiita.com/blueskyarea/items/f07466393ccb5efb3dc5	)
-- [ANSI エスケープコード](https://www.mm2d.net/main/prog/c/console-02.html)
-- [アスキーアート変換ツール](https://ktpcschool.com/imageToAscii/A)
-- [長い処理が終わった時にお知らせして欲しい](https://qiita.com/wakaba130/items/3951e4a4cc35f268f452)
-- [シェルスクリプトでオプション付きのコマンドを作成する](https://qiita.com/Esfahan/items/e88bb806c7ca1dc8b758)
+- [シェルスクリプト wait コマンド - Qiita](https://qiita.com/blueskyarea/items/f07466393ccb5efb3dc5	)
+- [ANSI エスケープコード - 碧色工房](https://www.mm2d.net/main/prog/c/console-02.html)
+- [長い処理が終わった時にお知らせして欲しい - Qiita](https://qiita.com/wakaba130/items/3951e4a4cc35f268f452)
+- [シェルスクリプトでオプション付きのコマンドを作成する - Qiita](https://qiita.com/Esfahan/items/e88bb806c7ca1dc8b758)
 - [How do I test for an empty string in a Bashcase statement? - stack overflow](https://stackoverflow.com/questions/17575392/how-do-i-test-for-an-empty-string-in-a-bash-case-statement/17575693)
 - [シェルスクリプトリファレンス](https://shellscript.sunone.me/parameter.html#%E5%BC%95%E6%95%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88)
-- [AA 変換（アスキーアート生成）](https://tool-taro.com/image_to_ascii/)
+
+## アスキーアート生成に使用したサイト
+- [アスキーアート変換ツール (リンク切れ)](https://ktpcschool.com/imageToAscii/A)
+- [AA 変換（アスキーアート生成）- Web 便利ツール @ ツールタロウ](https://tool-taro.com/image_to_ascii/)
 
 ## LICENSE
 
