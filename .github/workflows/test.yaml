@@ -9,11 +9,4 @@ jobs:
             - uses: actions/checkout@v3
             - name: All test
               run: ./scripts/soiya
-              run: ./scripts/soiya -a
-              run: ./scripts/soiya -e
-              run: ./scripts/soiya -k
-              run: ./scripts/soiya -n
-              run: ./scripts/soiya -j
-              run: ./scripts/soiya soiya
-              run: ./scripts/soiya ノムさんの＊
 
