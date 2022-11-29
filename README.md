@@ -9,7 +9,7 @@
 - OS : Ubuntu 20.04
 - Python : 3.7 ~ 3.10
 
-### 起動方法
+### 動作確認
 
 1. 以下のコマンドを実行してこのリポジトリをクローンします。
   ```
@@ -22,10 +22,26 @@
   ```
 
 ### 使用方法
-1. nums ファイルに総和を求めたい数列を入力します
-2. `plus` スクリプトを実行すると総和が出力されます
 
+plus スクリプトを実行すると、標準入力から数字を取得し、総和を計算します。
+
+<!--
 #### 例
+```
+$ ./plus
+```
+-->
+
+パイプライン処理に対応しています。
+##### 例
+```
+$ seq 5 | ./plus
+15
+```
+
+ファイルから総和を求めることも可能です。
+
+##### 例
 ```
 $ cat nums
 1.1
@@ -47,7 +63,13 @@ $ ./plus < nums
 
 ## soiya.sh
 ### 概要
-僕の好きな言葉、「ソイヤ」（ `soiya` ）を打つと、僕の好きな人ノムさん（ `NOM` ）が、「 SOIYA!!! 」 という音声と共に、アスキーアートで挨拶しにきてくれます。
+僕の好きな言葉、「ソイヤ」（ `soiya` ）を打つと、僕の好きな大学の先輩、ノムさん（ `NOM` ）が、「 SOIYA!!! 」 という音声と共に、アスキーアートで挨拶しにきてくれます。
+
+※このアスキーアート作成に使用された元画像は、作成者の先輩から許可を得て使用しています。
+
+※`SOIYA!.mp3` は [テキスト音声変換 - narakeet](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました
+
+※`ketsuana.mp3` は友人の音声を録音させていただきました。
 
 オプションによってはかわいい顔文字が 「 soiya の舞 」を踊ってくれます。
 
@@ -56,21 +78,17 @@ $ ./plus < nums
 ### 動作環境
 - OS : Ubuntu 20.04
 
-### 起動方法
+### 使用するために必要な準備
 1. この soiya.sh は `mplayer` を使用しているためインストールします。
   ```
   sudo apt install mplayer
   ```
-2. 以下のコマンドを実行してこのリポジトリをクローンします。
-  ```
-  git clone https://github.com/yazawakenichi/robot_system
-  ```
-3. 以下のコマンドで、ユーザを audio グループに追加します。
+2. 以下のコマンドで、ユーザを audio グループに追加します。
   `USERNAME` は自分のユーザ名を入力してください。
   ```
   sudo usermod -aG audio USERNAME
   ```
-4. 以下のコマンドで、soiya プログラムを実行します。
+3. クローンされたこのリポジトリのディレクトリに入り、以下のコマンドを実行することで、動作確認ができます。
   ```
   ./soiya.sh
   ```
@@ -106,11 +124,6 @@ $ ./plus < nums
 - [AA 変換（アスキーアート生成）- Web 便利ツール @ ツールタロウ](https://tool-taro.com/image_to_ascii/)
 - [テキスト音声変換 - narakeet](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow)
 
-### 使用したサイト
-- [アスキーアート変換ツール (リンク切れ)](https://ktpcschool.com/imageToAscii/A)
-- [AA 変換（アスキーアート生成）- Web 便利ツール @ ツールタロウ](https://tool-taro.com/image_to_ascii/)
-- [テキスト音声変換 - narakeet](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow)
-
 ### 参考
 - [シェルスクリプト wait コマンド - Qiita](https://qiita.com/blueskyarea/items/f07466393ccb5efb3dc5	)
 - [ANSI エスケープコード - 碧色工房](https://www.mm2d.net/main/prog/c/console-02.html)
@@ -124,7 +137,7 @@ $ ./plus < nums
 
 ## LICENSE
 
-* このソフトウェアパッケージは、3 条項 BSD ライセンスの下、再頒布および使用が許可されます。
+* このソフトウェアパッケージは、2 条項 BSD ライセンスの下、再頒布および使用が許可されます。
 * (C) 2022 Shuji Kawahara
 
 
