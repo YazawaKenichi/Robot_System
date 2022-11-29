@@ -25,6 +25,7 @@ jobs:
             - name: Soiya tset
               run: |
                   sudo apt-get install mplayer
+                  sudo usermod -aG audio $(whoami)
                   ./soiya
                   ./soiya -e
               shell: bash
