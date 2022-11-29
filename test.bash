@@ -1,6 +1,6 @@
 #!/bin/bash -xv
 # SPDX-FileCopyrightText: 2022 KAWAHARA Shuji s21c1036hn@s.chibakoudai.jp
-# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-License-Identifier: BSD-2-Clause
 
 ng () {
     # 第一引数を標準出力
