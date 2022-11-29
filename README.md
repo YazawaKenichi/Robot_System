@@ -71,11 +71,9 @@ $ ./plus < nums
 
 なおこのリポジトリは、 千葉工業大学 未来ロボティクス学科 2022 年度 ロボットシステム学 の講義課題で作成しました。
 
+※アスキーアート作成に使用された元画像は、許可を得て使用しています。
 
-
-※アスキーアート作成に使用された元画像は、<!-- 作成者の先輩から許可を得て使用しています -->
-
-※`SOIYA!.mp3` は [narakeet の テキスト音声変換](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました
+※`SOIYA!.mp3` は [narakeet の テキスト音声変換](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました。
 
 ※`ketsuana.mp3` は友人の音声を録音させていただきました。
 
