@@ -32,4 +32,3 @@ jobs:
                   echo "Add user to audio group"
                   sudo usermod -aG audio $(whoami)
                   ./soiya.bash
-                  ./soiya.bash -e
