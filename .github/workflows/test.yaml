@@ -1,9 +1,33 @@
-name: test
-on: push
+# test.yaml
+
+name: test  # GitHub Repository の Action Tab で表示される名前
+on: push    # Workflow を実行する原因となるイベントを定義（ここでは push されたら実行することになる）
+# on: [push, fork] のようにすれば複数のイベントをトリガーにできる
 jobs:
-    test:
-        runs-on: ubuntu-latest
+    plus:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                # テストする OS の指定
+                os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, macos-10.15, macos-11, macos-12, windows-2019, windows-2022]
+                # テストする Python のバージョンを指定
+                python-version: ["3.0", "3.1", "3.2",  "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         steps:
             - uses: actions/checkout@v3
             - name: All test
+              shell: bash
               run: ./test.bash
+    soiya:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04]
+        steps:
+            - uses: actions/checkout@v3
+            - name: Soiya tset
+              shell: bash
+              run: |
+                  sudo apt-get install mplayer
+                  echo "Add user to audio group"
+                  sudo usermod -aG audio $(whoami)
+                  ./soiya.bash
