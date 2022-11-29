@@ -59,11 +59,17 @@ AUDIO_S(){
 
 HELP () {
     echo -e "
-    ソイヤコマンド 有効なオプション
-    -a  Sound Effect SOIYA!
-    -e  Emotional SOIYA!
-    -k  いや～ノムさんの、ｹﾂｱﾅｧ...
-    -n  THE NOM FACE
+SOIYA! コマンド
+
+使用法: ./soiya.bash [引数]             ソイヤを摂取する
+    もしくは: ./soiya.bash -e [回数]    回数指定
+
+引数:
+    -a      音声「\"SOIYA!\" 」が再生されます
+    -e [N]  SOIYA! の舞を N 回だけ踊ってくれます
+            0 を指定するか省略した場合無限に踊り続けます
+    -k      音声「いや～ノムさんの、ｹﾂｱﾅｧ...」が流れます
+    -n      THE NOM FACE のアスキーアートのみ表示されます
 "
 }
 
@@ -82,13 +88,30 @@ else
                 AUDIO_S
                 ;;
             e)
-                while true
-                do
-                echo -n -e "\r\033[31m\033[1m SOIYA! L(‘ω’)┘ \033[0m"
-                sleep 0.5
-                echo -n -e "\r\033[34m\033[1m SOIYA! └(‘ω’)」 \033[0m"
-                sleep 0.5
-                done
+                shift `expr $OPTIND - 1`
+                COUNT=0
+                if [ $# -eq 1 ]; then
+                    COUNT=$1
+                fi
+
+                if [ $COUNT -ne 0 ]; then
+                    for i in `seq $COUNT`
+                    do
+                        echo -n -e "\r\033[31m\033[1m SOIYA! L(‘ω’)┘ \033[0m"
+                        sleep 0.5
+                        echo -n -e "\r\033[34m\033[1m SOIYA! └(‘ω’)」 \033[0m"
+                        sleep 0.5
+                    done
+                    echo ""
+                else
+                    while true
+                    do
+                        echo -n -e "\r\033[31m\033[1m SOIYA! L(‘ω’)┘ \033[0m"
+                        sleep 0.5
+                        echo -n -e "\r\033[34m\033[1m SOIYA! └(‘ω’)」 \033[0m"
+                        sleep 0.5
+                    done
+                fi
                 ;;
             k)
                 AUDIO_K
