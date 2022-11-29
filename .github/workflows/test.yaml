@@ -15,7 +15,7 @@ jobs:
               shell: bash
               run: |
                   # lsb_release -a
-                  whoami
+                  # whoami
                   pwd
                   # echo $0
     plus:
