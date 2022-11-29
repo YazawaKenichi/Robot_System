@@ -14,10 +14,10 @@ jobs:
             - name: All test
               shell: bash
               run: |
-                  lsb_release -a
+                  # lsb_release -a
                   whoami
                   pwd
-                  echo $0
+                  # echo $0
     plus:
         needs: action
         runs-on: ${{ matrix.os }}
