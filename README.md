@@ -16,7 +16,7 @@
   git clone https://github.com/yazawakenichi/robot_system
   ```
 
-1. 以下のコマンドを実行してスクリプトを実行します
+2. 以下のコマンドを実行してスクリプトを実行します
   ```
   ./plus < nums
   ```
