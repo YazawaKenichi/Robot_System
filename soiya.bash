@@ -137,4 +137,7 @@ fi
 # https://shellscript.sunone.me/parameter.html#%E5%BC%95%E6%95%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88  // 引数を処理する
 # https://tool-taro.com/image_to_ascii/ // 写真からアスキーアート作成
 # https://www.qoosky.io/techs/927115250f // dirname
+# https://hacknote.jp/archives/54054/   // for in
+# https://shellscript.sunone.me/parameter.html#%E5%8F%82%E8%80%83-%E5%BC%95%E6%95%B0%E3%81%A8%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3  // 引数処理
+
 
