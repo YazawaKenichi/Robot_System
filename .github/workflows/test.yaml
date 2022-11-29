@@ -4,13 +4,13 @@ name: test  # GitHub Repository の Action Tab で表示される名前
 on: push    # Workflow を実行する原因となるイベントを定義（ここでは push されたら実行することになる）
 # on: [push, fork] のようにすれば複数のイベントをトリガーにできる
 jobs:
-    actiontest:
+    action:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
                 os: [ubuntu, macos, windows]
         steps:
-            - users: actions/checkout@v3
+            - uses: actions/checkout@v3
             - name: All test
               shell: bash
               run: |
@@ -19,6 +19,7 @@ jobs:
                   pwd
                   echo $0
     plus:
+        needs: action
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
@@ -32,6 +33,7 @@ jobs:
               shell: bash
               run: ./test.bash
     soiya:
+        needs: action
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
