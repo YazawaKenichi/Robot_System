@@ -71,7 +71,7 @@ $ ./plus < nums
 
 
 
-※アスキーアート作成に使用された元画像は、作成者の先輩から許可を得て使用しています。
+※アスキーアート作成に使用された元画像は、<!-- 作成者の先輩から許可を得て使用しています -->
 
 ※`SOIYA!.mp3` は [narakeet の テキスト音声変換](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました
 
