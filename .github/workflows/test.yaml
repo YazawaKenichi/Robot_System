@@ -26,7 +26,6 @@ jobs:
             - uses: actions/checkout@v3
             - name: Soiya tset
               shell: bash
-              timeout-minutes: 3
               run: |
                   sudo apt-get install mplayer
                   echo "Add user to audio group"
