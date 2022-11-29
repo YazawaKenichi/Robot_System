@@ -112,5 +112,5 @@ fi
 # https://stackoverflow.com/questions/17575392/how-do-i-test-for-an-empty-string-in-a-bash-case-statement/17575693  // case において変数の中身が Empty の時
 # https://shellscript.sunone.me/parameter.html#%E5%BC%95%E6%95%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88  // 引数を処理する
 # https://tool-taro.com/image_to_ascii/ // 写真からアスキーアート作成
-# https://www.qoosky.io/techs/927115250f // dirname $0
+# https://www.qoosky.io/techs/927115250f // dirname $ 0
 
