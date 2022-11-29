@@ -4,28 +4,12 @@ name: test  # GitHub Repository の Action Tab で表示される名前
 on: push    # Workflow を実行する原因となるイベントを定義（ここでは push されたら実行することになる）
 # on: [push, fork] のようにすれば複数のイベントをトリガーにできる
 jobs:
-    action:
-        runs-on: ${{ matrix.os }}
-        strategy:
-            matrix:
-                os: [ubuntu, macos, windows]
-        steps:
-            - uses: actions/checkout@v3
-            - name: All test
-              shell: bash
-              run: |
-                  echo start
-                  # lsb_release -a
-                  # whoami
-                  # pwd
-                  # echo $0
     plus:
-        # needs: action
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
                 # テストする OS の指定
-                os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, macos-10.15, macos-11, macos-12, windows-2016, windows-2019, windows-2022]
+                os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, macos-10.15, macos-11, macos-12, windows-2019, windows-2022]
                 # テストする Python のバージョンを指定
                 python-version: ["3.0", "3.1", "3.2",  "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         steps:
@@ -34,7 +18,6 @@ jobs:
               shell: bash
               run: ./test.bash
     soiya:
-        # needs: action
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:

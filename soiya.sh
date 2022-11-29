@@ -50,11 +50,11 @@ SOIYA () {
 }
 
 AUDIO_K(){
-	mplayer ./media/ketsuana.mp3 >& /dev/null &
+	mplayer ./media/ketsuana.mp3 >& /dev/null 2>&1 &
 }
 	
 AUDIO_S(){
-	mplayer ./media/SOIYA\!.mp3 >& /dev/null &
+	mplayer ./media/SOIYA\!.mp3 > /dev/null 2>&1 &
 }
 
 HELP () {
