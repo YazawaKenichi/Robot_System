@@ -72,7 +72,7 @@ cd `dirname $0`
 if [ $# -eq 0 ]; then
     AUDIO_S
     THENOMFACE
-    exit 1
+    exit 0
 else
 
     while getopts aekn optKey >& /dev/null
@@ -101,6 +101,7 @@ else
                 ;;
         esac
     done
+    exit 0
 fi
 
 ### 参考にしたサイト / 使用したサイト ###
