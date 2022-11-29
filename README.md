@@ -57,7 +57,7 @@ $ ./plus < nums
 - OS : Ubuntu 20.04
 
 ### 起動方法
-1. この soiya.sh は `mplayer` を使用しているためインストールします
+1. この soiya.sh は `mplayer` を使用しているためインストールします。
   ```
   sudo apt install mplayer
   ```
@@ -65,7 +65,12 @@ $ ./plus < nums
   ```
   git clone https://github.com/yazawakenichi/robot_system
   ```
-3. 以下のコマンドで、soiya プログラムを実行します。
+3. 以下のコマンドで、ユーザを audio グループに追加します。
+  `USERNAME` は自分のユーザ名を入力してください。
+  ```
+  sudo usermod -aG audio USERNAME
+  ```
+4. 以下のコマンドで、soiya プログラムを実行します。
   ```
   ./soiya.sh
   ```
@@ -113,6 +118,7 @@ $ ./plus < nums
 - [シェルスクリプトでオプション付きのコマンドを作成する - Qiita](https://qiita.com/Esfahan/items/e88bb806c7ca1dc8b758)
 - [How do I test for an empty string in a Bashcase statement? - stack overflow](https://stackoverflow.com/questions/17575392/how-do-i-test-for-an-empty-string-in-a-bash-case-statement/17575693)
 - [シェルスクリプトリファレンス](https://shellscript.sunone.me/parameter.html#%E5%BC%95%E6%95%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88)
+- [MPlayer 音が出ない - 戯れの日々](https://awasirohs.blogspot.com/2010/12/mplayer.html)
 
 ## LICENSE
 
