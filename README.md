@@ -86,9 +86,8 @@ $ ./plus < nums
   sudo apt install mplayer
   ```
 2. 以下のコマンドで、ユーザを audio グループに追加します。
-  `USERNAME` は自分のユーザ名を入力してください。
   ```
-  sudo usermod -aG audio USERNAME
+  sudo usermod -aG audio $(whoami)
   ```
 3. クローンされたこのリポジトリのディレクトリに入り、以下のコマンドを実行することで、動作確認ができます。
   ```
