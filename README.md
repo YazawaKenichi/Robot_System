@@ -61,7 +61,7 @@ $ ./plus < nums
 23.14
 ```
 
-## soiya.sh
+## soiya.bash
 ### 概要
 僕の好きな言葉、「ソイヤ」（ `soiya` ）を打つと、僕の好きな大学の先輩、ノムさん（ `NOM` ）が、「 SOIYA!!! 」 という音声と共に、アスキーアートで挨拶しにきてくれます。
 
@@ -81,7 +81,7 @@ $ ./plus < nums
 - OS : Ubuntu 20.04
 
 ### 使用するために必要な準備
-1. この soiya.sh は `mplayer` を使用しているためインストールします。
+1. この soiya.bash は `mplayer` を使用しているためインストールします。
   ```
   sudo apt install mplayer
   ```
@@ -91,33 +91,33 @@ $ ./plus < nums
   ```
 3. クローンされたこのリポジトリのディレクトリに入り、以下のコマンドを実行することで、動作確認ができます。
   ```
-  ./soiya.sh
+  ./soiya.bash
   ```
 
 ### 使用方法
 1. 今すぐ soiya を摂取したい！
   ```
-  ./soiya.sh
+  ./soiya.bash
   ```
 
 2. 耳で聞く soiya の爽快感を味わいたい！
   ```
-  ./soiya.sh -a
+  ./soiya.bash -a
   ```
 
 3. NOM に会いたい！
   ```
-  ./soiya.sh -n
+  ./soiya.bash -n
   ```
 
 4. 気分転換したい！
   ```
-  ./soiya.sh -k
+  ./soiya.bash -k
   ```
 
 5. かわいい soiya が見たい！
   ```
-  ./soiya.sh -e
+  ./soiya.bash -e
   ```
 
 ### 使用したサイト
