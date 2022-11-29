@@ -14,9 +14,10 @@ jobs:
             - name: All test
               shell: bash
               run: |
+                  echo start
                   # lsb_release -a
                   # whoami
-                  pwd
+                  # pwd
                   # echo $0
     plus:
         needs: action
