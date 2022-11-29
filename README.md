@@ -1,6 +1,8 @@
 # Robot_System
-## plus
+
 [![test](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml/badge.svg)](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml)
+
+## plus
 
 ### 概要
 ファイルから数列を取得してその総和を出すスクリプトです。
