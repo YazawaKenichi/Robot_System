@@ -60,15 +60,15 @@ $ ./plus < nums
 - OS : Ubuntu 20.04
 
 ### 起動方法
-0. この soiya.sh は `mplayer` を使用しているためインストールします
+1. この soiya.sh は `mplayer` を使用しているためインストールします
   ```
   sudo apt install mplayer
   ```
-1. 以下のコマンドを実行してこのリポジトリをクローンします。
+2. 以下のコマンドを実行してこのリポジトリをクローンします。
   ```
   git clone https://github.com/yazawakenichi/robot_system
   ```
-2. 以下のコマンドで、soiya プログラムを実行します。
+3. 以下のコマンドで、soiya プログラムを実行します。
   ```
   ./soiya.sh
   ```
