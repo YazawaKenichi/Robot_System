@@ -2,6 +2,8 @@
 # SPDX-FileCopyrightText: 2022 KAWAHARA Shuji s21c1036hn@s.chibakoudai.jp
 # SPDX-License-Identifier: BSD-2-Clause
 
+### plus に対するテスト
+
 ng () {
     # 第一引数を標準出力
     echo NG at Line $1
@@ -18,19 +20,19 @@ out=$(seq 5 | ./plus)
 [ "${out}" = 15.0 ] || ng ${LINENO}
 
 ### STRANGE INPUT ###
-# out=$(echo あ | ./plus > /dev/null)
+out=$(echo あ | ./plus > /dev/null)
 # 直前のコマンドの終了コード $?
-# [ "$?" = 1 ] || ng ${LINENO}
-# [ "${out}" = "" ] || ng ${LINENO}
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
-# out=$(echo | ./plus > /dev/null)
+out=$(echo | ./plus > /dev/null)
 # １つ目の引数
 # echo $1
-# [ "$1" = 1 ] || ng ${LINENO}
-# [ "${out}" = "" ] || ng ${LINENO}
+[ "$1" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
 # && の左側が成功したら右側を実行
-[ "$res" = 0 ] && echo ALL OK
+[ "$res" = 0 ] && echo plus OK
 
 # ng が一度でも実行されると res が 1 になるので
 # $res が 0 なら OK という処理ができあがる

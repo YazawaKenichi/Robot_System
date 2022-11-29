@@ -30,4 +30,4 @@ jobs:
                   sudo apt-get install mplayer
                   echo "Add user to audio group"
                   sudo usermod -aG audio $(whoami)
-                  ./soiya.bash
+                  ./test_soiya.bash
