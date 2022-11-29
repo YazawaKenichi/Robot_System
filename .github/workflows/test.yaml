@@ -1,5 +1,8 @@
-name: test
-on: push
+# test.yaml
+
+name: test  # GitHub Repository の Action Tab で表示される名前
+on: push    # Workflow を実行する原因となるイベントを定義（ここでは push されたら実行することになる）
+# on: [push, fork] のようにすれば複数のイベントをトリガーにできる
 jobs:
     test:
         runs-on: ubuntu-latest
@@ -7,9 +10,16 @@ jobs:
             - uses: actions/checkout@v3
             - name: All test
               run: ./test.bash
+jobs:
     soiya:
-        runs-on: ubuntu-20.04
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-latest, macos-10.15, macos-11, macos-12, macs-latest]
         steps:
             - users: actions/checkout@v3
             - name: Soiya tset
-              run: ./soiya
+              run: |
+                  sudo apt install mplayer
+                  ./soiya
+                  ./soiya -e
