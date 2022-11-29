@@ -23,7 +23,7 @@
 
 ### 使用方法
 1. nums ファイルに総和を求めたい数列を入力します
-1. 以下を実行すると総和が出力されます
+2. 以下を実行すると総和が出力されます
 ```
 ./plus < nums
 ```
@@ -68,7 +68,7 @@ $ ./plus < nums
   ```
   git clone https://github.com/yazawakenichi/robot_system
   ```
-1. 以下のコマンドで、soiya プログラムを実行します。
+2. 以下のコマンドで、soiya プログラムを実行します。
   ```
   ./soiya.sh
   ```
