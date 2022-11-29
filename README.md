@@ -65,15 +65,17 @@ $ ./plus < nums
 ### 概要
 僕の好きな言葉、「ソイヤ」（ `soiya` ）を打つと、僕の好きな大学の先輩、ノムさん（ `NOM` ）が、「 SOIYA!!! 」 という音声と共に、アスキーアートで挨拶しにきてくれます。
 
-※このアスキーアート作成に使用された元画像は、作成者の先輩から許可を得て使用しています。
-
-※`SOIYA!.mp3` は [テキスト音声変換 - narakeet](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました
-
-※`ketsuana.mp3` は友人の音声を録音させていただきました。
-
 オプションによってはかわいい顔文字が 「 soiya の舞 」を踊ってくれます。
 
 なおこのリポジトリは、 千葉工業大学 未来ロボティクス学科 2022 年度 ロボットシステム学 の講義課題で作成しました。
+
+
+
+※アスキーアート作成に使用された元画像は、作成者の先輩から許可を得て使用しています。
+
+※`SOIYA!.mp3` は [narakeet の テキスト音声変換](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました
+
+※`ketsuana.mp3` は友人の音声を録音させていただきました。
 
 ### 動作環境
 - OS : Ubuntu 20.04
