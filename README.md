@@ -120,6 +120,7 @@ $ ./plus < nums
 - [シェルスクリプトリファレンス](https://shellscript.sunone.me/parameter.html#%E5%BC%95%E6%95%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88)
 - [MPlayer 音が出ない - 戯れの日々](https://awasirohs.blogspot.com/2010/12/mplayer.html)
 - [ユーザーをグループに追加する方法（usermod -aG） - ex1-lab](https://ex1.m-yabe.com/archives/2867)
+- [実行場所を気にしなくてよいシェルスクリプトの作り方 - Qoosky](https://www.qoosky.io/techs/927115250f)
 
 ## LICENSE
 
