@@ -11,22 +11,21 @@
 
 ### 起動方法
 
-## soiya.sh
 1. 以下のコマンドを実行してこのリポジトリをクローンします。
-```
-git clone https://github.com/yazawakenichi/robot_system
-```
+  ```
+  git clone https://github.com/yazawakenichi/robot_system
+  ```
 
 1. 以下のコマンドを実行してスクリプトを実行します
-```
-python3 plus < nums
-```
+  ```
+  ./plus < nums
+  ```
 
 ### 使用方法
 1. nums ファイルに総和を求めたい数列を入力します
 1. 以下を実行すると総和が出力されます
 ```
-python3 plus < nums
+./plus < nums
 ```
 
 #### 例
@@ -45,7 +44,7 @@ $ cat nums
 -11.11
 -12.12
 -13.13
-$ python3 plus < nums
+$ ./plus < nums
 23.14
 ```
 
@@ -62,17 +61,17 @@ $ python3 plus < nums
 
 ### 起動方法
 0. この soiya.sh は `mplayer` を使用しているためインストールします
-```
-sudo apt install mplayer
-```
+  ```
+  sudo apt install mplayer
+  ```
 1. 以下のコマンドを実行してこのリポジトリをクローンします。
-```
-git clone https://github.com/yazawakenichi/robot_system
-```
+  ```
+  git clone https://github.com/yazawakenichi/robot_system
+  ```
 1. 以下のコマンドで、soiya プログラムを実行します。
-```
-./soiya.sh
-```
+  ```
+  ./soiya.sh
+  ```
 
 ### 使用方法
 1. 今すぐ soiya を摂取したい！
