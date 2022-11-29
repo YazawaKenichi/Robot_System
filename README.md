@@ -96,28 +96,44 @@ $ ./plus < nums
 
 ### 使用方法
 1. 今すぐ soiya を摂取したい！
+  引数なしで実行することで、「SOIYA!」の音声と同時に NOM のアスキーアートが出現します。
   ```
   ./soiya.bash
   ```
 
 2. 耳で聞く soiya の爽快感を味わいたい！
+  引数 `-a` を指定することで、「SOIYA!」の音声のみが流れます。
   ```
   ./soiya.bash -a
   ```
 
 3. NOM に会いたい！
+  引数 `-n` を指定することで、音声無しで NOM のアスキーアートを出現させることができます。
   ```
   ./soiya.bash -n
   ```
 
 4. 気分転換したい！
+  引数 `-k` を指定することで、「SOIYA!」とは違う、「ノムさんのｹﾂｱﾅ」を聞くことができます。
   ```
   ./soiya.bash -k
   ```
 
-5. かわいい soiya が見たい！
+5. かわいい soiya を無限に見てたい！
+  引数 `-e` を指定することで、「SOIYA! の舞」を踊ってくれます。
   ```
   ./soiya.bash -e
+  ```
+  または
+  ```
+  ./soiya.bash -e 0
+  ```
+
+6. かわいい soiya を任意の回数舞ってほしい！
+  引数 `-e` の後に 0 意外の数字を指定することで、「SOIYA! の舞」を舞う回数を指定することができます。
+  以下の例では 5 回舞ってくれます。
+  ```
+  ./soiya.bash -e 5
   ```
 
 ### 使用したサイト
@@ -135,6 +151,8 @@ $ ./plus < nums
 - [MPlayer 音が出ない - 戯れの日々](https://awasirohs.blogspot.com/2010/12/mplayer.html)
 - [ユーザーをグループに追加する方法（usermod -aG） - ex1-lab](https://ex1.m-yabe.com/archives/2867)
 - [実行場所を気にしなくてよいシェルスクリプトの作り方 - Qoosky](https://www.qoosky.io/techs/927115250f)
+- [bash における for 文のループ回数指定 - HACKnOTE](https://hacknote.jp/archives/54054/)
+- [引数を処理する - UNIX & Linux コマンド・シェルスクリプト リファレンス](https://shellscript.sunone.me/parameter.html)
 
 ## LICENSE
 
