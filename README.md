@@ -2,6 +2,8 @@
 
 [![test](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml/badge.svg)](https://github.com/YazawaKenichi/Robot_System/actions/workflows/test.yaml)
 
+このリポジトリは、 千葉工業大学 未来ロボティクス学科 2022 年度 ロボットシステム学 の講義課題で作成したコマンドたちをまとめたリポジトリです。
+
 ## plus
 
 ### 概要
@@ -69,8 +71,6 @@ $ ./plus < nums
 
 オプションによってはかわいい顔文字が 「 soiya の舞 」を踊ってくれます。
 
-なおこのリポジトリは、 千葉工業大学 未来ロボティクス学科 2022 年度 ロボットシステム学 の講義課題で作成しました。
-
 ※アスキーアート作成に使用された元画像は、許可を得て使用しています。
 
 ※`SOIYA!.mp3` は [narakeet の テキスト音声変換](https://www.narakeet.com/languages/japanese-text-to-speech-jp/#trynow) を使用して作成しました。
@@ -130,7 +130,7 @@ $ ./plus < nums
   ```
 
 6. かわいい soiya を任意の回数舞ってほしい！
-  引数 `-e` の後に 0 意外の数字を指定することで、「SOIYA! の舞」を舞う回数を指定することができます。
+  引数 `-e` の後に 0 以外の数字を指定することで、「SOIYA! の舞」を舞う回数を指定することができます。
   以下の例では 5 回舞ってくれます。
   ```
   ./soiya.bash -e 5
